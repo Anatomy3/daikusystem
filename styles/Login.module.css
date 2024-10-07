@@ -164,7 +164,7 @@
 @media (max-width: 768px) {
   
   .footer {
-    bottom: 5px; /* Ditambahkan untuk menggeser lebih ke atas pada perangkat mobile */
+    bottom: 35px; /* Ditambahkan untuk menggeser lebih ke atas pada perangkat mobile */
   }
 
   .wave svg {
