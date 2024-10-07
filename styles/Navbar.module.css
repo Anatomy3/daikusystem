@@ -5,8 +5,8 @@
   padding: 0 1rem;
   background-color: #FFB13B;
   position: fixed;
-  width: calc(100% - 16rem); /* Sesuaikan dengan lebar sidebar yang tepat */
-  left: 16rem; /* Sesuaikan dengan lebar sidebar yang tepat */
+  width: calc(100% - 16rem);
+  left: 16rem;
   right: 0;
   top: 0;
   z-index: 100;
@@ -175,12 +175,13 @@ textarea.inputField {
   .customerServicePanel,
   .notificationPanel {
     position: fixed;
-    top: 60px; /* Sesuaikan dengan tinggi navbar */
+    top: 60px;
     left: 10px;
     right: 10px;
     width: calc(100% - 20px);
-    max-width: none;
-    max-height: 80vh; /* Batasi tinggi maksimum panel */
+    max-width: 400px;
+    margin: 0 auto;
+    max-height: 80vh;
     border-radius: 20px;
     overflow-y: auto;
     transform: none;
@@ -193,7 +194,7 @@ textarea.inputField {
   .notificationPanel::before,
   .customerServicePanel::after,
   .notificationPanel::after {
-    display: none; /* Remove the arrow for mobile view */
+    display: none;
   }
 
   .customerServicePanel {
