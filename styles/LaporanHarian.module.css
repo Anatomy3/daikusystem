@@ -1,0 +1,140 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ffb74d;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 16rem;
+  margin-top: 4rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField, .selectField {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.uploadButton {
+  background-color: #45a049;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.uploadButton:hover {
+  background-color: #388e3c;
+}
+
+/* Gaya untuk link daikuinterior.com di bawah tombol */
+.footerLink {
+  text-align: center;
+  color: #808080;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #45a049;
+  text-decoration: underline;
+}
+
+/* Tambahan untuk tanggal dan jam laporan */
+.dateTimeGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.dateTimeGroup .inputField {
+  width: calc(50% - 5px); /* Membagi lebar untuk tanggal dan jam */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .uploadButton {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Untuk tampilan kecil, atur ulang tanggal dan jam */
+  .dateTimeGroup {
+    flex-direction: column;
+  }
+
+  .dateTimeGroup .inputField {
+    width: 100%;
+  }
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.riwayatButton {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.riwayatButton:hover {
+  background-color: #218838;
+}

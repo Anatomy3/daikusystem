@@ -1,0 +1,208 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #FFB13B;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.logoContainer {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.logo {
+  width: 150px;  /* Increased from 120px */
+  height: auto;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.passwordContainer {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.eyeButton {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.rememberLabel {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.loginBtn:hover {
+  background-color: #388e3c;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #FFB13B;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+.footerLink {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .wave svg {
+    height: 120px;
+  }
+
+  .logoContainer {
+    top: 10px;
+  }
+
+  .logo {
+    width: 100px;  /* Increased from 80px */
+  }
+
+  .card {
+    padding: 20px;
+    width: 85%;
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .loginBtn {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .rememberLabel {
+    font-size: 12px;
+  }
+
+  .footerLink {
+    font-size: 12px;
+  }
+}

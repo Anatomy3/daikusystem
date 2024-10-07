@@ -1,0 +1,130 @@
+.mainContent {
+  margin-left: 16rem;
+  padding: 40px;
+  background-color: white;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header untuk bagian atas */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.tableContainer {
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.taskTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  border: 2px solid #000;
+}
+
+.taskTable th, .taskTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #000;
+}
+
+/* Perubahan untuk header tabel */
+.taskTable th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 15px;
+  border: 1px solid #000;
+}
+
+/* Untuk input yang dinonaktifkan (sudah tersimpan) */
+.disabledInput {
+  border: none;
+  background-color: transparent;
+  color: black;
+}
+
+/* Style untuk tombol */
+.addButton, .saveButton, .deleteButton, .editButton {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* Tombol tambah tugas */
+.addButton {
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #45a049;
+}
+
+/* Tombol simpan */
+.saveButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+/* Tombol edit */
+.editButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.editButton:hover {
+  background-color: #0069d9;
+}
+
+/* Tombol hapus */
+.deleteButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .tableContainer {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .taskTable {
+    font-size: 0.85rem;
+  }
+}

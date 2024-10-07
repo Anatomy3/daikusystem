@@ -1,0 +1,19 @@
+/* Mengatur agar halaman 100% dan tidak bisa di-scroll */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+    overflow-y: auto;   /* Memastikan halaman bisa di-scroll secara vertikal */
+  }
+  .mainContent {
+    margin-left: 14.4rem; /* Sesuaikan dengan lebar sidebar */
+    padding-top: 60px; /* Sesuaikan dengan tinggi navbar */
+  }
+  
+  @media (max-width: 768px) {
+    .mainContent {
+      margin-left: 0;
+    }
+  }

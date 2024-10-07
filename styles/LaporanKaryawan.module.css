@@ -1,0 +1,150 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  padding: 20px; /* Adjust padding */
+  margin-left: 15rem; /* Adjust margin-left to align with sidebar */
+  margin-top: 4rem; /* Menambahkan jarak yang lebih besar di atas */
+  background-color: #ffffff;
+  min-height: 100vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.filterButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.filterButton:hover {
+  background-color: #45a049;
+}
+
+.filterOptions {
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filterOptions label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filterSelect {
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchContainer {
+  margin-bottom: 10px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.laporanTable {
+  margin-top: 15px;
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th, .table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table td {
+  color: #555;
+  word-wrap: break-word;
+  max-width: 120px;
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    padding: 10px;
+    margin-top: 4rem; /* Sama seperti desktop, menambah jarak di atas */
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .filterButton {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .table th, .table td {
+    padding: 4px;
+  }
+
+  .table {
+    font-size: 0.75rem;
+  }
+
+  .laporanTable {
+    max-height: calc(100vh - 200px);
+  }
+}

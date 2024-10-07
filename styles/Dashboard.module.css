@@ -1,0 +1,129 @@
+.mainContent {
+  margin-left: 16rem;
+  margin-top: 3rem; /* Menggeser sedikit ke bawah dengan menambah margin-top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboardContent {
+  width: 100%;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column; /* Mengatur agar laporan karyawan di atas */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card p, .card ul {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Tabel laporan karyawan dengan scroll */
+.tableWrapper {
+  max-height: 300px; /* Sesuaikan tinggi konten yang bisa di-scroll */
+  overflow-y: auto; /* Aktifkan scroll */
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  table-layout: fixed; /* Mengunci lebar kolom */
+  font-size: 12px; /* Mengurangi ukuran font sebesar 4px (sebelumnya 16px) */
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word; /* Membungkus teks yang terlalu panjang */
+  white-space: normal;   /* Membuat teks turun ke baris berikutnya */
+}
+
+.table th {
+  background-color: #4CAF50; /* Mengubah background header menjadi hijau */
+  color: white; /* Mengubah warna teks menjadi putih */
+}
+
+.smallCol {
+  width: 8%; /* Kolom No sedikit lebih besar */
+}
+
+.mediumCol {
+  width: 15%; /* Kolom Jam Kerja berukuran sedang */
+}
+
+.statusCol {
+  width: 10%; /* Memperlebar kolom Status */
+}
+
+/* Mengatur ulang lebar kolom Progres Harian */
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 20%; /* Kolom Progres Harian lebih kecil dari sebelumnya */
+}
+
+/* Agar teks panjang turun ke baris berikutnya */
+.table th, .table td {
+  vertical-align: top; /* Menjaga teks tetap di atas jika ada banyak baris */
+}
+
+/* Tambahkan grid layout untuk card di bawah laporan karyawan */
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga card dalam satu baris */
+  gap: 20px;
+  margin-top: 20px; /* Tambahkan jarak antara laporan karyawan dan card lainnya */
+}
+
+/* Responsif untuk mode mobile */
+@media (max-width: 768px) {
+  .cardWrapper {
+    grid-template-columns: 1fr; /* Satu card per baris pada layar kecil */
+  }
+  
+  .mainContent {
+    margin-left: 0; 
+    padding: 0px; 
+    margin-top: 1.5rem; /* Geser sedikit ke bawah untuk mobile */
+  }
+  
+  .card {
+    margin-bottom: 10px; 
+    width: calc(100vw - 30px); 
+    margin-left: 3px; 
+    margin-right: 20px; 
+  }
+  
+  .gridWrapper {
+    grid-template-columns: 1fr; /* Tampilkan satu card per baris pada layar kecil */
+  }
+  
+  .tableWrapper {
+    max-height: 350px; 
+  }
+}

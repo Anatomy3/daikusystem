@@ -1,0 +1,222 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #FFB13B;
+  position: fixed;
+  width: calc(100% - 16rem); /* Sesuaikan dengan lebar sidebar yang tepat */
+  left: 16rem; /* Sesuaikan dengan lebar sidebar yang tepat */
+  right: 0;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  color: white;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.customerServiceIcon,
+.notificationIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+  z-index: 101;
+}
+
+.customerServiceIcon:hover,
+.notificationIcon:hover {
+  color: #e6e6e6;
+}
+
+.customerServicePanel,
+.notificationPanel {
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 20px;
+  background-color: white;
+  border: 2px solid #FFB13B;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  min-width: 280px;
+  z-index: 9999;
+  color: #333;
+  overflow: visible;
+}
+
+.customerServicePanel::before,
+.notificationPanel::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #FFB13B;
+}
+
+.customerServicePanel::after,
+.notificationPanel::after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  right: 22px;
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 18px solid white;
+}
+
+.customerServicePanel {
+  right: 30px;
+}
+
+.notificationPanel {
+  right: 10px;
+}
+
+.customerServicePanel h3,
+.notificationPanel h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.notificationPanel ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notificationPanel li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.notificationPanel li:last-child {
+  border-bottom: none;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #FFB13B;
+  outline: none;
+}
+
+textarea.inputField {
+  height: 100px;
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: #FFB13B;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #e69500;
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .pageTitle {
+    display: none;
+  }
+
+  .customerServicePanel,
+  .notificationPanel {
+    width: 90%;
+    max-width: 320px;
+    left: auto;
+    right: 10px;
+    transform: none;
+    top: 70px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .customerServicePanel::before,
+  .notificationPanel::before {
+    right: 15px;
+  }
+
+  .customerServicePanel::after,
+  .notificationPanel::after {
+    right: 17px;
+  }
+
+  .customerServicePanel h3,
+  .notificationPanel h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .inputField {
+    padding: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  textarea.inputField {
+    height: 80px;
+  }
+
+  .submitButton {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+
+  .notificationPanel li {
+    padding: 8px 0;
+    font-size: 0.85rem;
+  }
+}
