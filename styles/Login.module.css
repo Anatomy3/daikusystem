@@ -145,9 +145,10 @@
   padding: 10px 0;
   background-color: #FFB13B;
   position: absolute;
-  bottom: 0;
+  bottom: 10px; /* Diubah dari 0 menjadi 10px */
   z-index: 2;
 }
+
 
 .footerLink {
   color: #FFFFFF;
@@ -161,6 +162,11 @@
 }
 
 @media (max-width: 768px) {
+  
+  .footer {
+    bottom: 5px; /* Ditambahkan untuk menggeser lebih ke atas pada perangkat mobile */
+  }
+
   .wave svg {
     height: 120px;
   }
