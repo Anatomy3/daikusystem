@@ -174,49 +174,57 @@ textarea.inputField {
 
   .customerServicePanel,
   .notificationPanel {
-    width: 90%;
-    max-width: 320px;
-    left: auto;
-    right: 10px;
-    transform: none;
-    top: 70px;
-    max-height: 80vh;
+    position: fixed;
+    top: 60px; /* Sesuaikan dengan tinggi navbar */
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    height: calc(100vh - 60px); /* Tinggi penuh dikurangi tinggi navbar */
+    border-radius: 20px 20px 0 0; /* Rounded top corners */
     overflow-y: auto;
+    transform: none;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .customerServicePanel::before,
-  .notificationPanel::before {
-    right: 15px;
-  }
-
+  .notificationPanel::before,
   .customerServicePanel::after,
   .notificationPanel::after {
-    right: 17px;
+    display: none; /* Remove the arrow for mobile view */
+  }
+
+  .customerServicePanel {
+    padding: 20px;
+  }
+
+  .notificationPanel {
+    padding: 20px;
   }
 
   .customerServicePanel h3,
   .notificationPanel h3 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
   }
 
   .inputField {
-    padding: 8px;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   textarea.inputField {
-    height: 80px;
+    height: 120px;
   }
 
   .submitButton {
-    padding: 10px 15px;
-    font-size: 0.95rem;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 
   .notificationPanel li {
-    padding: 8px 0;
-    font-size: 0.85rem;
+    padding: 10px 0;
+    font-size: 0.95rem;
   }
 }
