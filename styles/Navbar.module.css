@@ -176,15 +176,17 @@ textarea.inputField {
   .notificationPanel {
     position: fixed;
     top: 60px; /* Sesuaikan dengan tinggi navbar */
-    left: 0;
-    right: 0;
-    width: 100%;
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
     max-width: none;
-    height: calc(100vh - 60px); /* Tinggi penuh dikurangi tinggi navbar */
-    border-radius: 20px 20px 0 0; /* Rounded top corners */
+    max-height: 80vh; /* Batasi tinggi maksimum panel */
+    border-radius: 20px;
     overflow-y: auto;
     transform: none;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: none;
   }
 
   .customerServicePanel::before,
@@ -206,12 +208,15 @@ textarea.inputField {
   .notificationPanel h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    color: #333;
   }
 
   .inputField {
     padding: 12px;
     font-size: 1rem;
     margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
   }
 
   textarea.inputField {
@@ -221,10 +226,20 @@ textarea.inputField {
   .submitButton {
     padding: 12px 20px;
     font-size: 1rem;
+    background-color: #FFB13B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
   }
 
   .notificationPanel li {
     padding: 10px 0;
     font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .notificationPanel li:last-child {
+    border-bottom: none;
   }
 }
