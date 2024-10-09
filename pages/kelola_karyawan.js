@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import styles from '../styles/KelolaKaryawan.module.css';
-import { FaEllipsisV, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FaEllipsisV, FaEnvelope, FaWhatsapp, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 export default function KelolaKaryawan() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,6 +22,7 @@ export default function KelolaKaryawan() {
   const [photoPreview, setPhotoPreview] = useState(null);
   const [currentEmployee, setCurrentEmployee] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -53,6 +54,10 @@ export default function KelolaKaryawan() {
       const previewURL = URL.createObjectURL(file);
       setPhotoPreview(previewURL);
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleAddNewEmployee = async () => {
@@ -311,13 +316,22 @@ export default function KelolaKaryawan() {
                 </div>
                 <div className={styles.formGroup}>
                   <label>Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    value={newEmployee.password}
-                    onChange={handleInputChange}
-                    className={styles.inputField}
-                  />
+                  <div className={styles.passwordInputContainer}>
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      name="password"
+                      value={newEmployee.password}
+                      onChange={handleInputChange}
+                      className={styles.inputField}
+                    />
+                    <button
+                      type="button"
+                      onClick={togglePasswordVisibility}
+                      className={styles.passwordToggle}
+                    >
+                      {showPassword ? <FaEyeSlash /> : <FaEye />}
+                    </button>
+                  </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label>Role</label>
