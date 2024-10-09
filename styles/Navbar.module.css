@@ -5,8 +5,8 @@
   padding: 0 1rem;
   background-color: #FFB13B;
   position: fixed;
-  width: calc(100% - 16rem); /* Sesuaikan dengan lebar sidebar yang tepat */
-  left: 16rem; /* Sesuaikan dengan lebar sidebar yang tepat */
+  width: calc(100% - 16rem);
+  left: 16rem;
   right: 0;
   top: 0;
   z-index: 100;
@@ -127,6 +127,7 @@
   border-radius: 8px;
   font-size: 0.9rem;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .inputField:focus {
@@ -140,7 +141,7 @@ textarea.inputField {
 }
 
 .submitButton {
-  background-color: #FFB13B;
+  background-color: #45a049;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -153,7 +154,7 @@ textarea.inputField {
 }
 
 .submitButton:hover {
-  background-color: #e69500;
+  background-color: #3d8b41;
 }
 
 .submitButton:active {
@@ -174,49 +175,66 @@ textarea.inputField {
 
   .customerServicePanel,
   .notificationPanel {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
-    max-width: 320px;
-    left: auto;
-    right: 10px;
-    transform: none;
-    top: 70px;
+    max-width: 350px;
     max-height: 80vh;
+    border-radius: 20px;
     overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: none;
+    padding: 20px;
   }
 
   .customerServicePanel::before,
-  .notificationPanel::before {
-    right: 15px;
-  }
-
+  .notificationPanel::before,
   .customerServicePanel::after,
   .notificationPanel::after {
-    right: 17px;
+    display: none;
   }
 
   .customerServicePanel h3,
   .notificationPanel h3 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
   }
 
   .inputField {
-    padding: 8px;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   textarea.inputField {
-    height: 80px;
+    height: 120px;
   }
 
   .submitButton {
-    padding: 10px 15px;
-    font-size: 0.95rem;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
   }
 
   .notificationPanel li {
-    padding: 8px 0;
-    font-size: 0.85rem;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .notificationPanel li:last-child {
+    border-bottom: none;
   }
 }
